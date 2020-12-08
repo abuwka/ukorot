@@ -13,7 +13,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark navbar-full bg-primary">
-        <a class="navbar-brand" href="#">UCOROT BRAT</a>
+        <a class="navbar-brand" href="#">HSHS</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#">Domoi<span class="sr-only">(current)</span></a>
             </li>
           </ul>
          
@@ -34,14 +34,14 @@
         <!-- <div class="form-group">
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter URL">
         </div> -->
-        <button type="submit" class="btn btn-primary">укоротить</button>
+        <button type="submit" class="btn btn-primary">GO!</button>
       </form>
       <!-- </div> -->
       {% for link in links %}
       <div class="d-flex justify-content-center align-items-center container">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <a target="_blank" href="{% url 'app:redir' new_link=link.new_link %}" class="card-link">{{link.new_link}}</a><br>
+            <a target="_blank" href="{% url 'app:redir' new_link=link.new_link %}" class="card-link">{{ host }}/{{link.new_link}}</a><br>
             <!-- <a href="#" class="card-link">{{link.old_link}}</a> -->
           </div>
         </div>
